@@ -21,12 +21,12 @@ let prayerTimes = {};
 let icons = ['mosque_whi.png', 'mosque_yel.png'];
 let currentIconIndex = 0;
 let timeCheckInterval;
-let soundFile = `${GLib.get_home_dir()}/.local/share/gnome-shell/extensions/last-call@faymaz/sounds/call.mp3`;
+let soundFile = `${GLib.get_home_dir()}/.local/share/gnome-shell/extensions/last_call@faymaz/sounds/call.mp3`;
 
 const PRAYER_TIME_URL = 'https://namazvakitleri.diyanet.gov.tr/en-US/';
 
 function initTranslations(domain) {
-    let localeDir = `${GLib.get_home_dir()}/.local/share/gnome-shell/extensions/last-call@faymaz/locale`;
+    let localeDir = `${GLib.get_home_dir()}/.local/share/gnome-shell/extensions/last_call@faymaz/locale`;
     Gettext.bindtextdomain(domain, localeDir);
     Gettext.textdomain(domain);
 }
