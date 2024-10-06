@@ -11,8 +11,8 @@ msgstr "Next prayer is in"
 msgid "Failed to fetch prayer times."
 msgstr "Failed to fetch prayer times."
 
-// 'İmsak', 'Güneş', 'Öğle', 'İkindi', 'Akşam', 'Yatsı'
-// 'Fajr', 'Sunrise', 'Dhuhr', 'Asr', 'Maghrib', 'Isha'
+#'İmsak', 'Güneş', 'Öğle', 'İkindi', 'Akşam', 'Yatsı'
+#'Fajr', 'Sunrise', 'Dhuhr', 'Asr', 'Maghrib', 'Isha'
 
 msgid "Fajr"
 msgstr "Fajr"
