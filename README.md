@@ -1,5 +1,6 @@
 
-# Last Call - Prayer Times GNOME Shell Extension
+# Last Call - Prayer Times based on Diyanet's schedule GNOME Shell Extension
+
 
 **Last Call** is a GNOME Shell extension that provides prayer times for various cities and alerts you with a sound notification 15 minutes before the next prayer time. The extension allows users to dynamically select their city and displays the remaining time until the next prayer directly on the GNOME top panel. The icon in the panel changes periodically, and sound notifications are triggered at the appropriate time.
 
