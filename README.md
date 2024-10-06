@@ -17,7 +17,7 @@
 
 ### Requirements
 
-- GNOME Shell (compatible with versions 40, 41, 42, 43)
+- GNOME Shell (compatible with versions 3.38, 40, 41, 42, 43, 44, 45, 46)
 - Gettext for localization
 - GStreamer for playing audio notifications
 
