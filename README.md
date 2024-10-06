@@ -92,4 +92,4 @@ Developed by [faymaz](https://github.com/faymaz).
 
 Special thanks to the Diyanet prayer times service for providing the data.
 
-```
+
