@@ -1,0 +1,34 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Prayer Times"
+msgstr "Namaz Vakitleri"
+
+msgid "Next prayer is in"
+msgstr "Sonraki namaz vakti"
+
+msgid "Failed to fetch prayer times."
+msgstr "Namaz vakitleri alınamadı."
+
+// 'İmsak', 'Güneş', 'Öğle', 'İkindi', 'Akşam', 'Yatsı'
+// 'Fajr', 'Sunrise', 'Dhuhr', 'Asr', 'Maghrib', 'Isha'
+
+msgid "Fajr"
+msgstr "İmsak"
+
+msgid "Sunrise"
+msgstr "Güneş"
+
+msgid "Dhuhr"
+msgstr "Öğle"
+
+msgid "Asr"
+msgstr "İkindi"
+
+msgid "Maghrib"
+msgstr "Akşam"
+
+msgid "Isha"
+msgstr "Yatsı"
+

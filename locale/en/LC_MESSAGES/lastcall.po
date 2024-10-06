@@ -1,0 +1,34 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Prayer Times"
+msgstr "Prayer Times"
+
+msgid "Next prayer is in"
+msgstr "Next prayer is in"
+
+msgid "Failed to fetch prayer times."
+msgstr "Failed to fetch prayer times."
+
+// 'İmsak', 'Güneş', 'Öğle', 'İkindi', 'Akşam', 'Yatsı'
+// 'Fajr', 'Sunrise', 'Dhuhr', 'Asr', 'Maghrib', 'Isha'
+
+msgid "Fajr"
+msgstr "Fajr"
+
+msgid "Sunrise"
+msgstr "Sunrise"
+
+msgid "Dhuhr"
+msgstr "Dhuhr"
+
+msgid "Asr"
+msgstr "Asr"
+
+msgid "Maghrib"
+msgstr "Maghrib"
+
+msgid "Isha"
+msgstr "Isha"
+

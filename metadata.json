@@ -1,0 +1,9 @@
+{
+    "uuid": "last-call@faymaz",
+    "name": "Last Call",
+    "description": "Namaz vakitlerini gösteren ve uyarılar yapan GNOME Shell uzantısı",
+    "version": 1,
+    "shell-version": ["40", "41", "42", "43"],
+    "url": "https://github.com/faymaz/last-call"
+  }
+  
