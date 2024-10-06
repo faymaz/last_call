@@ -1,3 +1,4 @@
+![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=faymaz.last_call)
 
 # Last Call - Prayer Times based on Diyanet's schedule GNOME Shell Extension
 
