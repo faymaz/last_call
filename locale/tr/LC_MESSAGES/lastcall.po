@@ -11,8 +11,8 @@ msgstr "Sonraki namaz vakti"
 msgid "Failed to fetch prayer times."
 msgstr "Namaz vakitleri alınamadı."
 
-// 'İmsak', 'Güneş', 'Öğle', 'İkindi', 'Akşam', 'Yatsı'
-// 'Fajr', 'Sunrise', 'Dhuhr', 'Asr', 'Maghrib', 'Isha'
+#'İmsak', 'Güneş', 'Öğle', 'İkindi', 'Akşam', 'Yatsı'
+#'Fajr', 'Sunrise', 'Dhuhr', 'Asr', 'Maghrib', 'Isha'
 
 msgid "Fajr"
 msgstr "İmsak"
