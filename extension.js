@@ -11,11 +11,11 @@ const _ = Gettext.gettext;
 
 let prayerIndicator;
 let iconChanger;
-let currentCityCode = '10214';  // Default city - Mörfelden-Walldorf
+let currentCityCode = '9541';  // Default city - İstanbul
 let cities = {
-    "Mörfelden-Walldorf": "10214",
+    "İstanbul": "9541",
+    "Ankara": "9206",
     "New York": "8869",
-    "Tuttlingen": "11083"
 };
 let prayerTimes = {};
 let icons = ['mosque_whi.png', 'mosque_yel.png'];
