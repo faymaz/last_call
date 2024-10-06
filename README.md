@@ -88,7 +88,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Credits
 
-Developed by [Your Name](https://github.com/faymaz).
+Developed by [faymaz](https://github.com/faymaz).
 
 Special thanks to the Diyanet prayer times service for providing the data.
 
