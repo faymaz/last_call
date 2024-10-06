@@ -26,7 +26,7 @@
 1. Clone or download this repository to your local machine:
 
     ```bash
-    git clone https://github.com/yourusername/last-call.git
+    git clone https://github.com/faymaz/last-call.git
     ```
 
 2. Create a directory for the extension in your local GNOME Shell extensions directory:
