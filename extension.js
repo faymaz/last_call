@@ -25,7 +25,7 @@ import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 
 //const Gettext = imports.gettext;
-//import Gettext from 'gi://Gettext';
+//--import Gettext from 'gi://Gettext';
 import { gettext as _ } from 'resource:///org/gnome/shell/extensions/extension.js';
 
 //const _ = Gettext.gettext;
