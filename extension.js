@@ -12,6 +12,7 @@ import Soup from 'gi://Soup?version=3.0'; // Soup versiyonu belirtmek gerekebili
 
 //const Gio = imports.gi.Gio;
 import * as Gio from 'gi://Gio';
+this._settings = new Gio.Settings({ schema: 'org.gnome.shell.extensions.last_call' });
 
 //const GLib = imports.gi.GLib;
 import * as GLib from 'gi://GLib';
