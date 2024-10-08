@@ -20,7 +20,8 @@ let icons = ['mosque_whi.png', 'mosque_yel.png'];
 let currentIconIndex = 0;
 let timeCheckInterval;
 let _settings;
-let homeDir = GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_HOME);  // Kullanıcı ana dizini
+//let homeDir = GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_HOME);  // Kullanıcı ana dizini
+let homeDir = GLib.get_home_dir();  // Eski yöntem geri döndürüldü
 let soundFile = `${homeDir}/.local/share/gnome-shell/extensions/last_call@faymaz/sounds/call.mp3`;
 
 const PRAYER_TIME_URL = 'https://namazvakitleri.diyanet.gov.tr/en-US/';
