@@ -1,7 +1,8 @@
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import * as St from 'gi://St';
 import Soup from 'gi://Soup?version=3.0';
-import * as Gio from 'gi://Gio';
+//import * as Gio from 'gi://Gio';
+import Gio from 'gi://Gio';
 import * as GLib from 'gi://GLib';
 import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
