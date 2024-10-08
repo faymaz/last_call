@@ -2,7 +2,7 @@
     "uuid": "last_call@faymaz",
     "name": "Last Call",
     "description": "Last Call - Prayer Times based on Diyanet's schedule GNOME Shell Extension",
-    "version": 0.1,
-    "shell-version": ["3.38", "40", "41", "42", "43", "44", "45", "46"],
+    "version": 1,
+    "shell-version": ["45", "46"],
     "url": "https://github.com/faymaz/last_call"
 }

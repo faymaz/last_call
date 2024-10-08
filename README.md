@@ -60,7 +60,7 @@
 
 ## Usage
 
-Once the extension is installed and activated, you will see an icon in the GNOME top panel. By default, the extension will fetch prayer times for the city of Mörfelden-Walldorf. You can change the city by clicking on the panel icon and selecting a different city from the dropdown menu.
+Once the extension is installed and activated, you will see an icon in the GNOME top panel. By default, the extension will fetch prayer times for the city of Istanbul. You can change the city by clicking on the panel icon and selecting a different city from the dropdown menu.
 
 The panel icon will change every two seconds to give a dynamic appearance. The remaining time until the next prayer will be calculated and, when 15 minutes remain, the `call.mp3` sound file will play as a notification.
 

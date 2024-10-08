@@ -1,12 +1,30 @@
-const Main = imports.ui.main;
-const St = imports.gi.St;
-const Soup = imports.gi.Soup;
-const Lang = imports.lang;
-const Gio = imports.gi.Gio;
-const GLib = imports.gi.GLib;
-const PanelMenu = imports.ui.panelMenu;
-const PopupMenu = imports.ui.popupMenu;
-const Gettext = imports.gettext;
+//const Main = imports.ui.main;
+import * as Main from 'resource:///org/gnome/shell/ui/main.js';
+
+//const St = imports.gi.St;
+import St from 'gi://St';
+
+//const Soup = imports.gi.Soup;
+import Soup from 'gi://Soup';  // GNOME Shell için HTTP istekleri
+
+//const Lang = imports.lang;
+import Lang from 'gi://lang';
+
+//const Gio = imports.gi.Gio;
+import Gio from 'gi://Gio';
+
+//const GLib = imports.gi.GLib;
+import GLib from 'gi://GLib';
+
+//const PanelMenu = imports.ui.panelMenu;
+import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
+
+//const PopupMenu = imports.ui.popupMenu;
+import PopupMenu from 'gi://popupMenu';
+
+//const Gettext = imports.gettext;
+import Gettext from 'gi://Gettext';
+
 const _ = Gettext.gettext;
 
 let prayerIndicator;
