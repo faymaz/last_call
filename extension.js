@@ -12,7 +12,7 @@ import Soup from 'gi://Soup?version=3.0'; // Soup versiyonu belirtmek gerekebili
 
 //const Gio = imports.gi.Gio;
 import * as Gio from 'gi://Gio';
-this._settings = new Gio.Settings({ schema: 'org.gnome.shell.extensions.last_call' });
+
 
 //const GLib = imports.gi.GLib;
 import * as GLib from 'gi://GLib';
@@ -116,6 +116,7 @@ function checkNextPrayer() {
 }
 
 function playSound() {
+    this._settings = new Gio.Settings({ schema: 'org.gnome.shell.extensions.last_call' });
     let sound = Gio.File.new_for_path(soundFile);
     let player = new imports.gi.Gst.Pipeline.new('player');
     let playbin = player.get_by_name('playbin');
@@ -124,6 +125,7 @@ function playSound() {
 }
 
 function updateIcon() {
+    this._settings = new Gio.Settings({ schema: 'org.gnome.shell.extensions.last_call' });
     currentIconIndex = (currentIconIndex + 1) % icons.length;
     prayerIndicator.set_gicon(Gio.icon_new_for_string(icons[currentIconIndex]));
 
@@ -152,6 +154,7 @@ function createCitySelectionMenu() {
 }
 
 function init() {
+    this._settings = new Gio.Settings({ schema: 'org.gnome.shell.extensions.last_call' });
     initTranslations('lastcall');  // Initialize translations
     prayerIndicator = new St.Icon({
         style_class: 'system-status-icon',
