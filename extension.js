@@ -3,10 +3,6 @@ import * as St from 'gi://St';
 import Soup from 'gi://Soup?version=3.0';
 import * as Gio from 'gi://Gio';
 import * as GLib from 'gi://GLib';
-//import GLib from 'gi://GLib';
-
-let homeDir = GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_HOME);
-
 import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 import { gettext as _ } from 'resource:///org/gnome/shell/extensions/extension.js';
@@ -23,7 +19,8 @@ let prayerTimes = {};
 let icons = ['mosque_whi.png', 'mosque_yel.png'];
 let currentIconIndex = 0;
 let timeCheckInterval;
-let _settings;  // GSettings nesnesi burada tutulacak
+let _settings;
+let homeDir = GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_HOME);  // Kullanıcı ana dizini
 let soundFile = `${homeDir}/.local/share/gnome-shell/extensions/last_call@faymaz/sounds/call.mp3`;
 
 const PRAYER_TIME_URL = 'https://namazvakitleri.diyanet.gov.tr/en-US/';
@@ -61,7 +58,7 @@ function parsePrayerTimes(html) {
         prayerTimes[prayerNames[index]] = el.textContent;
     });
 
-    checkNextPrayer();  // After fetching prayer times, calculate the next prayer
+    checkNextPrayer();
 }
 
 function checkNextPrayer() {
