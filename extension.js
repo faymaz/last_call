@@ -2,30 +2,34 @@
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 
 //const St = imports.gi.St;
-import St from 'gi://St';
+import * as St from 'gi://St';
 
 //const Soup = imports.gi.Soup;
-import Soup from 'gi://Soup';  // GNOME Shell için HTTP istekleri
+import Soup from 'gi://Soup?version=3.0'; // Soup versiyonu belirtmek gerekebilir
 
 //const Lang = imports.lang;
-import Lang from 'gi://lang';
+//import Lang from 'gi://lang';
 
 //const Gio = imports.gi.Gio;
-import Gio from 'gi://Gio';
+import * as Gio from 'gi://Gio';
 
 //const GLib = imports.gi.GLib;
-import GLib from 'gi://GLib';
+import * as GLib from 'gi://GLib';
 
 //const PanelMenu = imports.ui.panelMenu;
 import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
 
 //const PopupMenu = imports.ui.popupMenu;
-import PopupMenu from 'gi://popupMenu';
+//--import PopupMenu from 'gi://popupMenu';
+import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 
 //const Gettext = imports.gettext;
 import Gettext from 'gi://Gettext';
 
-const _ = Gettext.gettext;
+//const _ = Gettext.gettext;
+import { gettext as _ } from 'resource:///org/gnome/shell/extensions/extension.js';
+
+//import * as Lang from 'resource:///org/gnome/shell/misc/lang.js';
 
 let prayerIndicator;
 let iconChanger;
