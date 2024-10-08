@@ -28,9 +28,6 @@ import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 //--import Gettext from 'gi://Gettext';
 import { gettext as _ } from 'resource:///org/gnome/shell/extensions/extension.js';
 
-//const _ = Gettext.gettext;
-import { gettext as _ } from 'resource:///org/gnome/shell/extensions/extension.js';
-
 //import * as Lang from 'resource:///org/gnome/shell/misc/lang.js';
 
 let prayerIndicator;
