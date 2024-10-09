@@ -1,17 +1,12 @@
-import Soup from 'gi://Soup?version=3.0';
-import Gio from 'gi://Gio';
-import St from 'gi://St';
-
-import { gettext as _ } from 'resource:///org/gnome/shell/extensions/extension.js';
-//import {Extension, gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
-
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
+import * as St from 'gi://St';
+import Soup from 'gi://Soup?version=3.0';
+//import * as Gio from 'gi://Gio';
+import Gio from 'gi://Gio';
+import * as GLib from 'gi://GLib';
 import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
-import * as GLib from 'gi://GLib';
-
-
-
+import { gettext as _ } from 'resource:///org/gnome/shell/extensions/extension.js';
 
 let prayerIndicator;
 let iconChanger;
@@ -26,7 +21,10 @@ let icons = ['mosque_whi.png', 'mosque_yel.png'];
 let currentIconIndex = 0;
 let timeCheckInterval;
 let _settings;
+//let homeDir = GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_HOME);  // Kullanıcı ana dizini
+//let homeDir = GLib.get_home_dir();  // Eski yöntem geri döndürüldü
 let homeDir = GLib.getenv("HOME");  // Alternatif olarak HOME ortam değişkeni kullanılır
+
 
 let soundFile = `${homeDir}/.local/share/gnome-shell/extensions/last_call@faymaz/sounds/call.mp3`;
 
@@ -36,51 +34,39 @@ function initTranslations(domain) {
     let localeDir = `${homeDir}/.local/share/gnome-shell/extensions/last_call@faymaz/locale`;
     Gettext.bindtextdomain(domain, localeDir);
     Gettext.textdomain(domain);
-    log(`Translations initialized with localeDir: ${localeDir}`);
 }
 
 function fetchPrayerTimes() {
-    log("Fetching prayer times...");
     let session = new Soup.SessionAsync();
     let url = `${PRAYER_TIME_URL}${currentCityCode}`;
-    log(`Requesting data from URL: ${url}`);
 
     let message = Soup.Message.new('GET', url);
     session.queue_message(message, (session, response) => {
         if (response.status_code !== 200) {
-            log(`Failed to fetch prayer times. Status Code: ${response.status_code}`);
+            log(_("Failed to fetch prayer times."));
             return;
         }
 
         let html = response.response_body.data;
-        log("Prayer times data fetched successfully.");
         parsePrayerTimes(html);
     });
 }
 
 function parsePrayerTimes(html) {
-    log("Parsing prayer times...");
     let parser = new DOMParser();
     let doc = parser.parseFromString(html, 'text/html');
 
     let timeElements = doc.querySelectorAll('#today-pray-times-row .tpt-time');
     let prayerNames = ['Fajr', 'Sun', 'Dhuhr', 'Asr', 'Maghrib', 'Isha'];
 
-    if (timeElements.length === 0) {
-        log("No prayer times found in the HTML data.");
-        return;
-    }
-
     timeElements.forEach((el, index) => {
         prayerTimes[prayerNames[index]] = el.textContent;
-        log(`Prayer time for ${prayerNames[index]}: ${el.textContent}`);
     });
 
     checkNextPrayer();
 }
 
 function checkNextPrayer() {
-    log("Checking for the next prayer time...");
     let now = new Date();
     let nextPrayerTime;
     let nextPrayerName;
@@ -100,20 +86,17 @@ function checkNextPrayer() {
 
     if (nextPrayerTime) {
         let timeRemaining = nextPrayerTime - now;
-        log(`Next prayer (${nextPrayerName}) is in ${(timeRemaining / 60000).toFixed(2)} minutes`);
+        log(`${_("Next prayer")} (${nextPrayerName}) ${_("is in")} ${(timeRemaining / 60000).toFixed(2)} ${_("minutes")}`);
 
         if (timeRemaining <= 15 * 60 * 1000) {
             playSound();
         }
 
         timeCheckInterval = setTimeout(checkNextPrayer, timeRemaining % 60000);
-    } else {
-        log("No upcoming prayers found.");
     }
 }
 
 function playSound() {
-    log("Playing sound for next prayer...");
     let sound = Gio.File.new_for_path(soundFile);
     let player = new imports.gi.Gst.Pipeline.new('player');
     let playbin = player.get_by_name('playbin');
@@ -124,6 +107,7 @@ function playSound() {
 function updateIcon() {
     currentIconIndex = (currentIconIndex + 1) % icons.length;
     prayerIndicator.set_gicon(Gio.icon_new_for_string(icons[currentIconIndex]));
+
     GLib.timeout_add(GLib.PRIORITY_DEFAULT, 2000, updateIcon);
 }
 
@@ -135,7 +119,6 @@ function createCitySelectionMenu() {
     for (let city in cities) {
         let cityItem = new PopupMenu.PopupMenuItem(city);
         cityItem.connect('activate', () => {
-            log(`City selected: ${city}`);
             currentCityCode = cities[city];
             fetchPrayerTimes();
         });
